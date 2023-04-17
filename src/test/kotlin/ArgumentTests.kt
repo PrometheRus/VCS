@@ -89,7 +89,7 @@ class ArgumentTests {
     fun configNewNameTest() {
         VersionControlSystem(arrayOf("config", "Nikita")).runSystem()
         val newUserName = File("vcs/config.txt").readLines()[0]
-        assertEquals("The username is Nikita.\n", outContent.toString())
+        assertEquals("The username is $newUserName.\n", outContent.toString())
     }
 
 }
