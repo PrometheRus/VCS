@@ -5,7 +5,7 @@ import java.io.File
 import kotlin.test.BeforeTest
 
 
-class SimpleTests {
+class FileAndDirCreationTests {
     private val vcsDir = File("vcs")
 
     @BeforeTest
