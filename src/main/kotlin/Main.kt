@@ -42,7 +42,7 @@ class VersionControlSystem(private val args: Array<String>) {
     }
 
     private fun helpCommand() {
-        println("""
+        val output = """
             These are SVCS commands:
             config                  Get a username.
             config {username}       Set a username.
@@ -54,7 +54,16 @@ class VersionControlSystem(private val args: Array<String>) {
             commit {comment}        Save changes.
             checkout {commitID}     Restore a file.
             delete                  Delete "VCS" directory
-            """.trimIndent())
+            """.trimIndent()
+
+        when (args.size) {
+            1 -> {
+                println(output)
+            }
+            else -> {
+                println("Wrong input. Max one argument is allowed")
+            }
+        }
     }
 
     /**
